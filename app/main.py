@@ -5,7 +5,7 @@ from app.services.chain import split_summaries, prepare_final_summary
 from app.services.closest import return_closest_indices
 from app.services.translator import translate_text
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.middleware.asgi import ASGIApp
+# from fastapi.middleware.asgi import ASGIApp
 
 
 
@@ -33,4 +33,4 @@ async def process_pdf(file: UploadFile = File(...), language:str = Form(...)):
     ans = time.time() - c
     return {"Summary": result, "Done in: ": ans}
 
-app = ASGIApp(app)
+# app = ASGIApp(app)
