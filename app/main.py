@@ -13,11 +13,15 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"}
 
 @app.post("/summarize")
 async def process_pdf(file: UploadFile = File(...), language:str = Form(...)):
