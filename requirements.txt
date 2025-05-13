@@ -2,12 +2,9 @@ langchain
 tiktoken
 langchain_huggingface
 pymupdf
-fastapi
-uvicorn
 pymupdf4llm
 langchain-groq
 langchain-google-genai
-python-multipart
 scikit-learn
 deep-translator
 python-dotenv
